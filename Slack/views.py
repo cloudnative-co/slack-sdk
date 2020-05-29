@@ -38,7 +38,7 @@ class Views(Client):
     def publish(self, user_id: str, view: dict, hash: str = None):
         path = "{}.publish".format(self.path)
         query = {
-            "user_id": trigger_id,
+            "user_id": user_id,
             "view": json.dumps(view),
             "hash": hash
         }
