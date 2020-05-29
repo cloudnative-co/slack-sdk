@@ -34,3 +34,14 @@ class Views(Client):
         }
         response = self.request(method="post", path=path, query=query)
         return response
+
+    def publish(self, user_id: str, view: dict, hash: str = None):
+        path = "{}.publish".format(self.path)
+        query = {
+            "user_id": trigger_id,
+            "view": json.dumps(view),
+            "hash": hash
+        }
+        response = self.request(method="post", path=path, query=query)
+        return response
+
