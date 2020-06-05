@@ -7,3 +7,4 @@ from .file import *
 from .dialog import *
 from .views import *
 from .im import *
+from .emoji import Emoji
